@@ -1,0 +1,21 @@
+<div>
+    <div class="row">
+        <button class="btn btn-success my-2 ">Create New Contact</button>
+    </div>
+    <div class="row">
+        @for (contact of contacts; track contact.id) {
+            <div class="col-md-6 my-2 mx-0">
+                <div class="card p-4">
+                    <h2>{{contact.lastName}}, {{contact.firstName}}</h2>
+                    <h1>{{contact.phoneNumber}}</h1>
+                    <h3>{{contact.email}}</h3>
+                    <hr class=""my-1/>
+                    <div>
+                        <button class="btn btn-outline-primary">Edit</button>
+                        <button class="btn btn-outline-danger" (click)="deleteContact(contact.id)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
