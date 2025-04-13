@@ -14,4 +14,8 @@ export class DataService {
   getContactById(id: number): Contact {
     return this.contacts.filter(contact => contact.id == id)[0];
   }
+
+  addContact(contact: Contact) {
+    this.contacts.push(contact);
+  }
 }

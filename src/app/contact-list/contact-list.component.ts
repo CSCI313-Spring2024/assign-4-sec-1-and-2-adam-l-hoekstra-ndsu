@@ -15,7 +15,6 @@ export class ContactListComponent implements OnInit {
 
   ngOnInit() {
     this.contacts = this.dataService.contacts;
-    console.log(this.contacts);
   }
 
   deleteContact(id: number) {

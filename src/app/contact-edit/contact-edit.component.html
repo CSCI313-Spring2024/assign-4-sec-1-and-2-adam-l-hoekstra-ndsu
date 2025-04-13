@@ -1,0 +1,45 @@
+<div class="container my-3">
+    <div class="col-md-8 mx-auto">
+        <div class="row my-3">
+            <div class="card p-4">
+                <div class="card-title">Edit Contact</div>
+                <div class="card-body p-4">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="firstName">First Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="firstName"
+                                    value="{{contact.firstName}}" #fname required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="lastName">Last Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="lastName" value="{{contact.lastName}}"
+                                    #lname required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="phoneNumber">Phone Number</label>
+                            <div class="col-sm-10">
+                                <input type="tel" class="form-control" id="phoneNumber"
+                                    value="{{contact.phoneNumber}}" #pnum required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" for="email">Email Address</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email"
+                                    value="{{contact.email}}" #email required>
+                            </div>
+                        </div>
+                        <div class="text-center my-3">
+                            <button class="btn btn-outline-primary" routerLink="">Cancel</button>
+                            <button type="submit" class="btn btn-primary" (click)="updateContact(fname.value, lname.value, pnum.value, email.value)" routerLink="">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
