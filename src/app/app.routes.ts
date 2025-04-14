@@ -7,7 +7,7 @@ export const routes: Routes = [
     {
         path:"",
         component: ContactListComponent,
-        title: "Post List"
+        title: "Contact List"
     },
     {
         path: "contact/create",
